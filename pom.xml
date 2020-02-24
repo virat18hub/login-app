@@ -70,6 +70,17 @@
 		</dependency>
 
 	</dependencies>
+	
+	<distributionManagement>
+
+        <repository>
+                <id>nexus</id>
+                <name>Nexusrepo</name>
+                <url>http://192.168.56.14:8081/repository/mynewrepo</url>
+        </repository>
+
+      </distributionManagement>
+
 
 	<build>
 		<finalName>AccountLogin</finalName>
