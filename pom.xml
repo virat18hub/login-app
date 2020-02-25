@@ -70,16 +70,13 @@
 		</dependency>
 
 	</dependencies>
-	
 	<distributionManagement>
-
-          <snapshotRepository>
-                <id>nexus</id>
-                <name>nexus</name>
-                <url>http://54.224.187.105:8081/repository/nexusrepo/</url>
-          </snapshotRepository>
-
-      </distributionManagement>
+	   <repository>
+		<id>nexus</id>
+		<name>Myrepo</name>
+		<url>http://54.224.187.105:8081/repository/new1/</url>
+	   </repository>
+	</distributionManagement>
 
 
 	<build>
