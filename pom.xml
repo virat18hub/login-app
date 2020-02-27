@@ -73,7 +73,7 @@
 	<distributionManagement>
 	   <repository>
 		<id>nexus</id>
-		<name>Myrepo</name>
+		<name>Myrepo1</name>
 		<url>http://54.224.187.105:8081/repository/nexusrepo/</url>
 	   </repository>
 	</distributionManagement>
