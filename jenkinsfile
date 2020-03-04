@@ -1,0 +1,11 @@
+pipeline {
+  agent slave1
+    stages {
+      stage("clean work space and test the code") {
+        steps {
+          echo "cleaning thww workspace and testing code by maven"
+          sh "mvn clean test"
+        } 
+      }
+   }
+} 
