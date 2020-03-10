@@ -72,9 +72,9 @@
 	</dependencies>
 	<distributionManagement>
 	   <repository>
-		<id>nexus4</id>
-		<name>Myrepo2</name>
-		<url>http://54.224.187.105:8081/repository/nexusrepo/</url>
+		<id>Nexus</id>
+		<name>newrepo</name>
+		<url>http://34.228.63.219:8081/repository/newrepo/</url>
 	   </repository>
 	</distributionManagement>
 
@@ -96,7 +96,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
+				<version>2.9</version>	
 				<configuration>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>false</downloadJavadocs>
