@@ -15,20 +15,20 @@ pipeline {
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "Nexus_cred"
     }
-  stages{
+  stages {
     stage("Code Checkout from scm") {
-      steps{
+      steps {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github_key', url: 'https://github.com/panda8899repo/login-app.git']]])
       }
     }
-    stage("code quality test by sonarqube"){
+    stage("code quality test by sonarqube") {
       steps{
         echo "Testing The code quality"
         sh "mvn clean install sonar:sonar"
       }
     }
-    stage("publish artifact to nexus repo"){
-      steps{
+    stage("publish artifact to nexus repo") {
+      steps {
           //Read POM.xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/pipeline-utility-steps
           pom = readMavenPom file: "pom.xml";
           // Find built artifact under target folder
@@ -60,7 +60,7 @@ pipeline {
                     [artifactId: pom.artifactId,
                     classifier: '',
                     file: "pom.xml",
-                     type: "pom"]
+                    type: "pom"]
                  ]
               );
               
