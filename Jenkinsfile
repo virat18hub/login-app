@@ -24,7 +24,7 @@ pipeline {
     stage("code quality test by sonarqube"){
       steps{
         echo "Testing The code quality"
-        mvn clean install sonar:sonar
+        sh "mvn clean install sonar:sonar"
       }
     }
     stage("publish artifact to nexus repo"){
