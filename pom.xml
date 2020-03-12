@@ -73,8 +73,8 @@
 	<distributionManagement>
 	   <repository>
 		<id>Nexus</id>
-		<name>newrepo</name>
-		<url>http://34.228.63.219:8081/repository/newrepo/</url>
+		<name>loginapprepo</name>
+		<http://3.87.119.185:8081/repository/loginapp/url></url>
 	   </repository>
 	</distributionManagement>
 
