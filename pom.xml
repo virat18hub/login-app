@@ -74,7 +74,7 @@
 	   <repository>
 		<id>Nexus</id>
 		<name>loginapprepo</name>
-		<http://3.87.119.185:8081/repository/loginapp/url></url>
+		<url>http://3.87.119.185:8081/repository/loginapp/</url>
 	   </repository>
 	</distributionManagement>
 
