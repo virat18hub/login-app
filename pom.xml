@@ -70,6 +70,13 @@
 		</dependency>
 
 	</dependencies>
+      <distributionManagement>
+          <snapshotRepository>
+               <id>snapshots</id>
+              <name>master.example.com-snapshots</name>
+              <url>http://18.212.114.255:8081/artifactory/libs-snapshot</url>
+         </snapshotRepository>
+      </distributionManagement>
            <build>
 		<finalName>AccountLogin</finalName>
 		<plugins>
