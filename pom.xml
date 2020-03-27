@@ -100,7 +100,38 @@
 					<wtpversion>2.0</wtpversion>
 				</configuration>
 			</plugin>
-
+			<plugin>
+                           <groupId>org.jacoco</groupId>
+                           <artifactId>jacoco-maven-plugin</artifactId>
+                           <version>0.8.6-SNAPSHOT</version>
+                        
+			   <executions>
+			      <execution>
+				 <id>prepare-agent</id>
+				 <goals>
+			          s   <goal>prepare-agent</goal>
+				 </goals>
+			      </execution>
+			      <execution>
+				  <id>post-unit.test</id>
+				  <phase>test</phase>
+				  <goals>
+			    	      <goal>report</goal>
+				  </goals>
+			          <configuration>
+					  <!-- sets The path for the file which contains the execution data -->
+					  <dataFile>target/jacoco.exec</dataFile>
+					  <!-- sets the output directory for the code coverage repoet -->
+					  <outputDirectory>target/my-reports</outputDirectory>
+				  </configuration>
+			      </execution>
+			  </executions>
+			  <configuration>
+			     <systemPropertyVariables>
+				     <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+			     </systemPropertyVariables>
+			  </configuration>
+		      </plugin>
 		</plugins>
 	</build>
 
