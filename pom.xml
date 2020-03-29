@@ -74,7 +74,7 @@
           <snapshotRepository>
                <id>snapshots</id>
               <name>master.example.com-snapshots</name>
-              <url>http://18.212.114.255:8081/artifactory/libs-snapshot</url>
+              <url>http://35.153.184.107:8081/artifactory/libs-snapshot</url>
          </snapshotRepository>
       </distributionManagement>
            <build>
