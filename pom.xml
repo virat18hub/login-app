@@ -109,7 +109,7 @@
 			      <execution>
 				 <id>prepare-agent</id>
 				 <goals>
-			          s   <goal>prepare-agent</goal>
+			             <goal>prepare-agent</goal>
 				 </goals>
 			      </execution>
 			      <execution>
