@@ -5,7 +5,7 @@
   tasks:
     - name: download the url
       get_url:
-        url: http://18.207.164.72:8081/repository/deploy1/com/login/AccountLogin/1.0-SNAPSHOT/AccountLogin-1.0-20200417.181517-1.war
+        url: http://18.207.164.72:8081/repository/deploy1/com/login/AccountLogin/1.0-SNAPSHOT/AccountLogin-1.0-20200417.181517-2.war
         dest: /opt/artifact/
         force: yes
     - name: rename the war file
