@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.10.25
+- hosts: 192.168.10.11
   become: true
   tasks:
     - name: download the url
