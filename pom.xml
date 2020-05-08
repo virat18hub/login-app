@@ -73,8 +73,8 @@
       <distributionManagement>
           <snapshotRepository>
                <id>nexus</id>
-              <name>master.example.com-snapshots</name>
-              <url>http://18.207.164.72:8081/repository/deploy4/</url>
+              <name>nexusrepo</name>
+              <url>http://3.21.163.150:8081/repository/loginapp-repo/</url>
          </snapshotRepository>
       </distributionManagement>
            <build>
