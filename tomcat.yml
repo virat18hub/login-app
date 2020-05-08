@@ -1,0 +1,48 @@
+---
+- hosts: 192.168.10.11
+  become: true
+  tasks:
+    - name: download the url
+      get_url:
+        url: http://18.207.164.72:8081/repository/deploy1/com/login/AccountLogin/1.0-SNAPSHOT/AccountLogin-1.0-20200417.190648-1.war
+        dest: /opt/artifact/
+        force: yes
+    - name: rename the war file
+      shell: mv /opt/artifact/*.war /opt/artifact/login.war
+
+    - name: delet the older artifacts
+      file: path=/opt/artifact/AccountLogin-1.0-20200417.190648-1.war state=absent
+
+    - name: stop tomcat service
+      service:
+        name: tomcat
+        state: stopped
+
+    - name: take the log backups
+      archive:
+        path: /opt/tomcat/logs/*
+        dest: /var/tmp/tocat_logs.tar.gz
+        format: gz
+        force_archive: true
+
+    - name: deleting old artifacts
+      file:
+        path: /opt/tomcat/webapps/login.war
+        state: absent
+   
+   
+    - name: deleting old artifacts war file
+      file:
+        path: /opt/tomcat/webapps/login.war
+        state: absent
+
+    - name: Deploy war file
+      command: cp -pr /opt/artifact/login.war /opt/tomcat/webapps
+      notify: restart tomcat
+
+ 
+  handlers:
+    - name: restart tomcat
+      service:
+        name: tomcat
+        state: restarted
