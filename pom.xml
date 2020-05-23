@@ -74,7 +74,7 @@
           <snapshotRepository>
                <id>nexus</id>
               <name>nexusrepo</name>
-              <url>http://3.21.163.150:8081/repository/login-app-repo/</url>
+              <url>http://ec2-18-234-55-43.compute-1.amazonaws.com:8081/repository/test-repo/</url>
          </snapshotRepository>
       </distributionManagement>
            <build>
