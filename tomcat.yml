@@ -5,7 +5,7 @@
     - name: download the url
       get_url:
         url: 	http://3.228.7.4:8081/repository/nexustest/com/login/AccountLogin/1.0-SNAPSHOT/AccountLogin-1.0-20200531.151202-1.war
-        dest: /opt/artifact
+        dest: /opt/artifact/
         force: yes
     - name: rename the war file
       shell: mv /opt/artifact/*.war /opt/artifact/login.war
